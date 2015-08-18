@@ -1,0 +1,33 @@
+#Xubuntu Stuff
+orage
+parole
+gmusicbrowser
+gnumeric
+pidgin
+xchat
+xchat-gnome-common
+xchat-indicator
+xchat-common
+xchat-gnome-indicator
+xchat-xsys
+xchat-gnome
+xchat-guile    
+xfce4-notes
+xfce4-notes-plugin
+abiword
+abiword-dbg
+abiword-plugin-mathview
+abiword-common
+abiword-plugin-grammar
+xfce4-dict
+mousepad
+
+#UbuntuMate Stuff
+gucharmap
+pluma
+galculator
+shotwell*
+hexchat
+brasero
+rhythmbox*
+guvcview
