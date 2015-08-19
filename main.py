@@ -1,15 +1,22 @@
 #!/usr/bin/python
 
+## Imports ##
 import os;
+import getopt;
+import sys;
 
+################################################################################
+# PPA                                                                          #
+################################################################################
 def install_ppa(ppa_lines):
     ppa_to_add = [];
 
     for line in ppa_lines:
         line = line.replace("\n","").lstrip(" ").rstrip(" ");
 
-        grep_cmd = "grep ^ /etc/apt/sources.list /etc/apt/sources.list.d/* | grep {} > /dev/null";
-        grep_cmd = grep_cmd.format(line);
+        grep_cmd =  "grep ^ /etc/apt/sources.list ";
+        grep_cmd += "/etc/apt/sources.list.d/* | grep {} > /dev/null";
+        grep_cmd  = grep_cmd.format(line);
 
         ret_val = os.system(grep_cmd);
         if(ret_val == 0):
@@ -26,6 +33,9 @@ def install_ppa(ppa_lines):
     if(len(ppa_to_add) != 0):
         os.system("sudo apt-get update && sudo apt-get upgrade");
 
+################################################################################
+# Install                                                                      #
+################################################################################
 def install_pkgs(install_lines):
     pkg_to_add = [];
 
@@ -48,6 +58,9 @@ def install_pkgs(install_lines):
         install_cmd = "sudo apt-get install -y {}".format(pkg_name);
         os.system(install_cmd);
 
+################################################################################
+# Purge                                                                        #
+################################################################################
 def purge_pkgs(purge_lines):
     pkg_to_purge = [];
     
@@ -70,22 +83,60 @@ def purge_pkgs(purge_lines):
         purge_cmd = "sudo apt-get purge -y {}".format(pkg_name);
         
         os.system(purge_cmd);
-               
+              
 
+################################################################################
+# Helper functions                                                             #
+################################################################################
+def get_all_lines_from_files(files_list):
+    lines = [];
+    for filename in files_list:
+        try:
+            file_lines = open(filename).readlines();
+            for line in file_lines:
+                if(len(line) != 0 and line[0] != "#"):
+                    lines.append(line);                
+        except Exception, e:
+            print e;
+            exit(1);
+    return lines;
+
+def show_help():
+    print "Help";               
+
+################################################################################
+# Script initializaton                                                         #
+################################################################################
 def main():
-    install_lines = [];
-    purge_lines   = [];
-    ppa_lines     = [];
+    install_filenames = [];
+    purge_filenames   = [];
+    ppa_filenames     = [];
 
-    try:
-        install_lines = open("install.txt").readlines();
-        purge_lines   = open("purge.txt").readlines();
-        ppa_lines     = open("ppa.txt").readlines();
-    except Exception, e:
-        print e;
+    #Get the command line flags.
+    options = getopt.gnu_getopt(sys.argv[1:], "", ["install=",
+                                                   "purge=",
+                                                   "ppa="]);
+
+    #Check if any flag was passed.
+    if(len(options[0]) == 0):
+        show_help();
         exit(1);
+
+    #Parse the options.
+    for option in options[0]:
+        key, value = option;
+        key = key.lstrip("-");
+
+        if(key == "install"): install_filenames.append(value);
+        if(key == "purge"):   purge_filenames.append(value);
+        if(key == "ppa"):     ppa_filenames.append(value);
+
+    install_lines = get_all_lines_from_files(install_filenames);
+    purge_lines   = get_all_lines_from_files(purge_filenames);
+    ppa_lines     = get_all_lines_from_files(ppa_filenames);
     
     install_ppa(ppa_lines);        
     install_pkgs(install_lines);
     purge_pkgs(purge_lines);
+
 main();
