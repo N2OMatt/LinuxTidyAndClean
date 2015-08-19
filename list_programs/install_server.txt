@@ -1,0 +1,4 @@
+mysql-client 
+mysql-server
+mysql-common
+mysql-utilities
