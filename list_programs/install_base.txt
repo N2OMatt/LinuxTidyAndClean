@@ -14,5 +14,6 @@ openssh-client
 openssh-server
 python-qt4
 python-termcolor
+python-pip
 screen
 tree
