@@ -23,3 +23,7 @@ virtualbox-guest-additions-iso
 virtualbox-guest-dkms
 virtualbox-guest-utils
 vlc
+zsnes
+stella
+higan
+dgen
