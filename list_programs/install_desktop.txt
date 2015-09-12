@@ -1,5 +1,5 @@
-audacity
 #Image/3D
+audacity
 blender
 gimp
 
@@ -17,12 +17,13 @@ retext
 chromium-browser
 copy
 ubuntu-restricted-extras
+youtube-dl
 
 #Study
 geogebra
 tunesviewer
 
-#
+#Development
 python-pygame
 python-pyglet
 python-qt4
@@ -31,6 +32,9 @@ qtcreator-doc
 cmake
 cmake-extras
 cmake-qt-gui
+doxygen
+doxygen-doc
+doxygen-gui
 
 #VBOX
 virtualbox
