@@ -28,6 +28,9 @@ python-pyglet
 python-qt4
 qtcreator
 qtcreator-doc
+cmake
+cmake-extras
+cmake-qt-gui
 
 #VBOX
 virtualbox
