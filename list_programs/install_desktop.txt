@@ -59,3 +59,5 @@ libxrandr-dev
 libglew-dev
 libsndfile1-dev
 libopenal-dev
+libxcb-image0-dev
+libudev-dev
