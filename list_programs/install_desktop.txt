@@ -2,6 +2,7 @@
 audacity
 blender
 gimp
+tiled
 
 #Audio/Video
 cheese
