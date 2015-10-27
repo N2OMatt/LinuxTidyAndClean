@@ -18,6 +18,7 @@ retext
 chromium-browser
 copy
 ubuntu-restricted-extras
+indicator-multiload
 youtube-dl
 
 #Study
@@ -61,3 +62,4 @@ libsndfile1-dev
 libopenal-dev
 libxcb-image0-dev
 libudev-dev
+
