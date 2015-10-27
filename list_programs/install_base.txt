@@ -1,19 +1,28 @@
+#Other
+linux-source
 build-essential
-cloc
+openssh-client
+openssh-server
+
+#Utils.
+screen
+tree
+
+#Dev tools.
+g++
 doxygen
 doxygen-doc
+cloc
 filezilla
-g++
+
+#Git
 git
 git-doc
 git-extras
 git-gui
 git-sh
-linux-source
-openssh-client
-openssh-server
+
+#Python packages.
 python-qt4
 python-termcolor
 python-pip
-screen
-tree
