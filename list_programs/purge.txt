@@ -33,3 +33,12 @@ rhythmbox*
 guvcview
 
 #Ubuntu Stuff.
+brasero*
+empathy*
+gnome-mahjongg
+gnome-mines
+gnome-sudoku
+evolution*
+gedit*
+gnome-calculator
+totem*
