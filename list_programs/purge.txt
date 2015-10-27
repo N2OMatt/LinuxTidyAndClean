@@ -31,3 +31,5 @@ hexchat
 brasero
 rhythmbox*
 guvcview
+
+#Ubuntu Stuff.
