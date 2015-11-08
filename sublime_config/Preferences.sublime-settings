@@ -2,6 +2,7 @@
     //Sublime
     "color_scheme": "Packages/User/Morrowind.tmtheme",
     "dictionary": "Packages/Language - English/en_US.dic",
+    "hot_exit": false,
     //Interface
     "bold_folder_labels"      : true,
     "draw_minimap_border"     : true,
