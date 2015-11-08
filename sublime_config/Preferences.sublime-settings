@@ -1,0 +1,80 @@
+{
+    //Sublime
+    "color_scheme": "Packages/User/Morrowind.tmtheme",
+    "dictionary": "Packages/Language - English/en_US.dic",
+    //Interface
+    "bold_folder_labels"      : true,
+    "draw_minimap_border"     : true,
+    "fade_fold_buttons"       : false,
+    "rulers"                  : [ 80, 120 ],
+    "show_encoding"           : true,
+    "show_full_path"          : true,
+    "show_line_endings"       : true,
+    "word_wrap"               : false,
+    "highlight_modified_tabs" : true,
+    //Editor
+    "auto_indent"                       : true,
+    "default_line_ending"               : "unix",
+    "detect_indentation"                : true,
+    "ensure_newline_at_eof_on_save"     : true,
+    "translate_tabs_to_spaces"          : true,
+    "trim_automatic_white_space"        : true,
+    "trim_trailing_white_space_on_save" : false,
+    //FONT
+    "font_face"      : "Menlo",
+    "font_size"      : 10,
+    "highlight_line" : true,
+    // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",
+    // "subpixel_antialias", "no_round" (OS X only), "gdi" (Windows only) and
+    // "directwrite" (Windows only)
+    "font_options": ["no_italic", "bold"],
+
+
+
+
+
+    //OTHER
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "binary_file_patterns":
+    [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip"
+    ],
+    "file_exclude_patterns":
+    [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace"
+    ],
+}
+
