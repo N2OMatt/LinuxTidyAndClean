@@ -1,2 +1,3 @@
 paolorotolo/copy 
 webupd8team/sublime-text-3
+mystic-mirage/pycharm

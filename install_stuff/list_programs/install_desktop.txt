@@ -38,6 +38,7 @@ cmake-qt-gui
 doxygen
 doxygen-doc
 doxygen-gui
+pycharm
 
 #VBOX
 virtualbox
