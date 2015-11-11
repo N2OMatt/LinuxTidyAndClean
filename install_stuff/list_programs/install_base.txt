@@ -10,6 +10,7 @@ tree
 
 #Dev tools.
 g++
+clang
 ddd
 doxygen
 doxygen-doc
