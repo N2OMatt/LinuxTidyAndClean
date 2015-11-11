@@ -10,6 +10,7 @@ tree
 
 #Dev tools.
 g++
+ddd
 doxygen
 doxygen-doc
 cloc
@@ -23,6 +24,7 @@ git-gui
 git-sh
 
 #Python packages.
+python-dev
 python-qt4
 python-termcolor
 python-pip
