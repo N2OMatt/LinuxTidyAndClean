@@ -30,8 +30,8 @@ xournal
 python-pygame
 python-pyglet
 python-qt4
-qtcreator
-qtcreator-doc
+#qtcreator     #Not install qtcreator anymore...
+#qtcreator-doc #Not install qtcreator anymore...
 cmake
 cmake-extras
 cmake-qt-gui
