@@ -1,0 +1,136 @@
+################################################################################
+## Development                                                                ##
+################################################################################
+linux-source
+build-essential
+
+# Compilers.
+clang
+g++
+
+# Debuggers.
+ddd
+
+# Build Tools.
+cmake
+cmake-extras
+cmake-qt-gui
+
+# Documentation.
+cloc
+doxygen
+doxygen-doc
+doxygen-gui
+
+# Git.
+git
+git-doc
+git-extras
+git-gui
+git-sh
+
+# Python packages.
+python-dev
+python-pip
+python-pygame
+python-pyglet
+python-qt4
+python-qt4
+python-termcolor
+
+# Ruby.
+ruby
+ruby-dev
+
+# Editors
+pycharm
+sublime-text-installer
+retext
+eclipse
+eclipse-cdt
+eclipse-cdt-autotools
+
+# Libs
+freeglut3-dev
+libfreetype6-dev
+libglew-dev
+libjpeg-dev
+libopenal-dev
+libsndfile1-dev
+libudev-dev
+libxcb-image0-dev
+libxrandr-dev
+
+# PHP + MySQL
+apache2
+libapache2-mod-auth-mysql
+libapache2-mod-php5
+mysql-client
+mysql-common
+mysql-server
+mysql-utilities
+php5
+php5-cli
+php5-common
+php5-mcrypt
+php5-mysql
+php5-mysql
+
+
+################################################################################
+## Utils                                                                      ##
+################################################################################
+tree
+screen
+openssh-client
+openssh-server
+
+################################################################################
+## Other                                                                      ##
+################################################################################
+filezilla
+chromium-browser
+copy
+ubuntu-restricted-extras
+youtube-dl
+
+################################################################################
+## Image/3D                                                                   ##
+################################################################################
+audacity
+blender
+gimp
+tiled
+
+################################################################################
+## Audio/Video
+################################################################################
+cheese
+vlc
+clementine
+ffmpeg
+
+################################################################################
+## Study                                                                      ##
+################################################################################
+geogebra
+tunesviewer
+xournal
+
+################################################################################
+## VBOX                                                                       ##
+################################################################################
+virtualbox
+virtualbox-dkms
+virtualbox-guest-additions-iso
+virtualbox-guest-dkms
+virtualbox-guest-utils
+
+################################################################################
+## Emulators                                                                  ##
+################################################################################
+dosbox
+zsnes
+stella
+higan
+dgen

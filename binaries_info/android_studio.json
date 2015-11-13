@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "Android Studio",
+        "url"  : "https://dl.google.com/dl/android/studio/ide-zips/1.4.1.0/android-studio-ide-141.2343393-linux.zip",
+        "dir"  : "bin/android_studio"
+    },
+    {
+        "name" : "Android NDK",
+        "url"  : "http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin",
+        "dir"  : "bin/android_ndk"
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "name"         : "QT",
+        "url"          : "http://linorg.usp.br/Qt/archive/qt/5.5/5.5.1/qt-opensource-linux-x64-5.5.1.run",
+        "dir"          : "qt_qtcreator",
+        "install_file" : "qt_install.sh"
+    }
+]

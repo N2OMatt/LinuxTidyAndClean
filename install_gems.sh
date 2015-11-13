@@ -1,5 +1,5 @@
 #!/bin/bash
 
-#Install stuff for Jekyll.
+# Jekyll.
 sudo gem install jekyll
 sudo gem install blunder
