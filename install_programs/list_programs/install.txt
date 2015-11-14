@@ -84,6 +84,7 @@ tree
 screen
 openssh-client
 openssh-server
+xterm
 
 ################################################################################
 ## Other                                                                      ##
