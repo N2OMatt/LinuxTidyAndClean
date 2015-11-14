@@ -25,36 +25,38 @@ def print_fatal(msg):
 def download_binary(url, destination):
     wget.download(url, destination);
 
-def download_and_install(info):
-    name         = info["name"];
-    url          = info["url"];
-    dir          = info["dir"];
+def download_and_install(program_name, info):
+    package_name = info["package_name"];
+    download_url = info["download_url"];
     install_file = info["install_file"];
 
-    full_bindir_path      = os.path.join(BIN_PATH, dir);
-    bin_name              = os.path.split(url)[1];
-    bin_fullpath          = os.path.join(full_bindir_path, bin_name);
+    download_fullpath     = os.path.join(BIN_PATH, program_name);
     install_file_fullpath = os.path.join(INFO_PATH, install_file);
 
+    print download_fullpath;
+    print install_file_fullpath;
+
     #Check if the item is already downloaded.
-    if(os.path.exists(bin_fullpath)):
+    if(os.path.exists(download_fullpath)):
         print "Already downloaded...."
     else:
-        os.system("mkdir -p {}".format(full_bindir_path));
-        download_binary(url, bin_fullpath);
+        os.system("mkdir -p {}".format(download_fullpath));
+        download_binary(download_url, download_fullpath);
 
     #Call the installation script.
-    os.system("{} {}".format(install_file_fullpath, bin_fullpath));
+    os.system("{script} {downpath} {pkgname}".format(script=install_file_fullpath,
+                                                     downpath=download_fullpath,
+                                                     pkgname=package_name));
 
 def run(programs):
     print "Running for:\n", "\n".join(programs);
 
-    for program in programs:
-        info_path = os.path.join(INFO_PATH, program + ".json");
+    for program_name in programs:
+        info_path = os.path.join(INFO_PATH, program_name + ".json");
         info_json = json.load(open(info_path));
 
         for program_info in info_json:
-            download_and_install(program_info);
+            download_and_install(program_name, program_info);
 
 def main():
     if(len(sys.argv) == 1):

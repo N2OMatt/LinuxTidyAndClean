@@ -1,7 +1,0 @@
-[DONE]#1 - Separate the install/ppa for "server" and desktop installations.
-#2 - Add colors to output.
-#3 - Make the output better formatted.
-[DONE]#4 - Add the command line options for main.py.
-[DONE]#5 - Put stuff into logical dirs.
-#6 - Add the comments to source code.
-#7 - Add the header to main.py

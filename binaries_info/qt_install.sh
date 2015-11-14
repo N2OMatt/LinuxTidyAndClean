@@ -1,11 +1,15 @@
 #!/bin/sh
 
+DOWNLOAD_PATH=$1
+PACKAGE_NAME=$2
+DEST_PATH=~/Documents/Packages
+PACKAGE_PATH=$DOWNLOAD_PATH/$PACKAGE_NAME.run
+
 #COWTODO: Make this install the binary automatically....
-echo "Installing QT - [$1]..."
+echo "Installing QT - [$PACKAGE_NAME]"
 
-#Make executable
-chmod 744 $1
+# #Make executable
+chmod 744 $PACKAGE_PATH
 
-#Run...
-$1
-
+# #Run...
+$PACKAGE_PATH

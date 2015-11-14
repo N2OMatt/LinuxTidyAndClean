@@ -1,8 +1,7 @@
 [
     {
-        "name"         : "Source Pro Font",
-        "url"          : "https://cloud.github.com/downloads/adobe-fonts/source-code-pro/SourceCodePro_FontsOnly-1.013.zip",
-        "dir"          : "fonts",
-        "install_file" : "fonts.sh"
+        "package_name" : "SourceCodePro_FontsOnly-1.013",
+        "download_url" : "https://cloud.github.com/downloads/adobe-fonts/source-code-pro/SourceCodePro_FontsOnly-1.013.zip",
+        "install_file" : "fonts_install.sh"
     }
 ]

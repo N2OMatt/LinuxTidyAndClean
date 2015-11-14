@@ -1,8 +1,7 @@
 [
     {
-        "name"         : "Cocos2d-X",
-        "url"          : "http://cocos2d-x.org/filedown/cocos2d-x-3.8.1.zip",
-        "dir"          : "cocos2dx",
+        "package_name" : "cocos2d-x-3.8.1",
+        "download_url" : "http://cocos2d-x.org/filedown/cocos2d-x-3.8.1.zip",
         "install_file" : "cocos2dx_install.sh"
     }
 ]
