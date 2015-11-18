@@ -30,15 +30,18 @@ def download_and_install(program_name, info):
     download_url = info["download_url"];
     install_file = info["install_file"];
 
-    download_fullpath     = os.path.join(BIN_PATH, program_name);
+    download_dir          = os.path.join(BIN_PATH, program_name);
+    download_name         = os.path.split(download_url)[1];
+    download_fullpath     = os.path.join(download_dir, download_name);
     install_file_fullpath = os.path.join(INFO_PATH, install_file);
 
     print download_fullpath;
     print install_file_fullpath;
+    print download_name;
 
     #Check if the item is already downloaded.
     if(os.path.exists(download_fullpath)):
-        print "Already downloaded...."
+        print "Already downloaded... ", download_fullpath
     else:
         os.system("mkdir -p {}".format(download_fullpath));
         download_binary(download_url, download_fullpath);
