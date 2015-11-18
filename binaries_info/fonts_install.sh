@@ -16,12 +16,13 @@ unzip -qq -o $PACKAGE_PATH -d $TEMP_PATH
 #Copy the otf fonts...
 echo "Copying fonts..."
 find $TEMP_PATH -iname  *.otf -exec cp {} $DEST_PATH \;
+find $TEMP_PATH -iname  *.ttf -exec cp {} $DEST_PATH \;
 
 #Remove the temp folder.
 echo "Removing temporary folder..."
 rm -rf $TEMP_PATH;
 
-#Rebuild the cache.
+# #Rebuild the cache.
 fc-cache -f -v
 
 echo "done..."
