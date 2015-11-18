@@ -1,6 +1,6 @@
 {
-    //Sublime
     "color_scheme": "Packages/User/Morrowind.tmtheme",
+    // "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
     "dictionary": "Packages/Language - English/en_US.dic",
     "hot_exit": false,
     //Interface
@@ -23,16 +23,14 @@
     "trim_trailing_white_space_on_save" : true,
     "draw_white_space"                  : "all",
     //FONT
-    "font_face"      : "Source Code Pro",
-    "font_size"      : 11,
+    // "font_face"      : "Menlo",
+    "font_face"      : "Ubuntu Mono",
+    "font_size"      : 13.5,
     "highlight_line" : true,
     // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",
     // "subpixel_antialias", "no_round" (OS X only), "gdi" (Windows only) and
     // "directwrite" (Windows only)
     "font_options": ["no_italic", "bold"],
-
-
-
 
 
     //OTHER
