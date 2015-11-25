@@ -11,7 +11,7 @@ xchat-common
 xchat-gnome-indicator
 xchat-xsys
 xchat-gnome
-xchat-guile    
+xchat-guile
 xfce4-notes
 xfce4-notes-plugin
 abiword
@@ -32,6 +32,7 @@ brasero
 rhythmbox*
 guvcview
 tilda
+libreoffice-*
 
 #Ubuntu Stuff.
 brasero*
