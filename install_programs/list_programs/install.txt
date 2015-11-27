@@ -85,6 +85,7 @@ screen
 openssh-client
 openssh-server
 xterm
+ncdu
 
 ################################################################################
 ## Other                                                                      ##
