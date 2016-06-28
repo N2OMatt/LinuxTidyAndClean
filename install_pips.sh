@@ -1,7 +1,20 @@
 #!/bin/bash
 
+## Pip itself.
+sudo -H pip install --upgrade pip
+
 # wget
-sudo pip install wget
+sudo -H pip install wget
 
 # Gitcheck
-sudo pip install git+git://github.com/badele/gitcheck.git
+sudo -H pip install git+git://github.com/badele/gitcheck.git
+
+# Youtube-dl
+sudo -H  pip install youtube-dl
+
+# AmazingCow - CowTermcolor
+sudo -H pip install cowtermcolor
+
+# Rainbomstream
+sudo -H pip install rainbowstream
+
