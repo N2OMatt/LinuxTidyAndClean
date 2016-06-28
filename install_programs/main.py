@@ -40,7 +40,7 @@ def install_pkgs(install_lines):
     pkg_to_add = [];
 
     for pkg_name in install_lines:
-        check_cmd = """dpkg -l | cut -d" " -f3 | grep ^{} > /dev/null""".format(pkg_name);
+        check_cmd = """dpkg -l | cut -d" " -f3 | grep -e ^{}$ > /dev/null""".format(pkg_name);
         ret_val = os.system(check_cmd);
 
         if(ret_val == 0):
