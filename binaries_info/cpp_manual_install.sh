@@ -1,25 +1,21 @@
 #!/bin/sh
 
-DATE=$(date +%s)
-TEMP_PATH=./binaries/$DATE
-PACKAGE_PATH=$1/$2.zip
 
-echo "Installing C++ Manual [$2]"
+DOWNLOAD_URL=https://github.com/jeaye/stdman/archive/master.zip
+DST_PATH=$(mktemp -d);
 
-# #Create the destination path if not exists
-# #and unzip the contents there.
+echo "Downloading C++ Manual";
+wget $DOWNLOAD_URL -P $DST_PATH;
+
+
 echo "Unzipping..."
-unzip -qq -o $PACKAGE_PATH -d $TEMP_PATH
+unzip -qq -o $DST_PATH/master.zip -d $DST_PATH
 
-# Run the package scripts....
-echo "Running package scripts..."
-cd $TEMP_PATH/$2
+echo "Installing C++ Manual"
+cd $DST_PATH/stdman-master
+
 ./configure
 sudo make install
-cd - 
-
-# #Remove the temp folder.
-echo "Removing temporary folder..."
-# rm -rf $TEMP_PATH;
+sudo mandb
 
 echo "done..."

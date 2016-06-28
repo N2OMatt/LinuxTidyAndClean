@@ -1,7 +1,0 @@
-[
-    {
-        "package_name" : "stdman-master",
-        "download_url" : "https://github.com/jeaye/stdman/archive/master.zip",
-        "install_file" : "cpp_manual_install.sh"
-    }
-]

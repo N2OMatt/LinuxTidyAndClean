@@ -25,6 +25,7 @@ def print_fatal(msg):
 def download_binary(url, destination):
     wget.download(url, destination);
 
+
 def download_and_install(program_name, info):
     package_name = info["package_name"];
     download_url = info["download_url"];
