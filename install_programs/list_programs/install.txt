@@ -50,6 +50,28 @@ libsndfile1-dev
 libudev-dev
 libxcb-image0-dev
 libxrandr-dev
+## SDL
+libsdl2-2.0-0
+libsdl2-dbg
+libsdl2-dev
+libsdl2-doc
+libsdl2-gfx-1.0-0
+libsdl2-gfx-dbg
+libsdl2-gfx-dev
+libsdl2-gfx-doc
+libsdl2-image-2.0-0
+libsdl2-image-dbg
+libsdl2-image-dev
+libsdl2-mixer-2.0-0
+libsdl2-mixer-dbg
+libsdl2-mixer-dev
+libsdl2-net-2.0-0
+libsdl2-net-dbg
+libsdl2-net-dev
+libsdl2-ttf-2.0-0
+libsdl2-ttf-dbg
+libsdl2-ttf-dev
+
 
 
 ## PHP + MySQL #################################################################
