@@ -8,6 +8,7 @@ sudo -H pip install wget
 
 # Gitcheck
 sudo -H pip install git+git://github.com/badele/gitcheck.git
+sudo -H pip install colrored
 
 # Youtube-dl
 sudo -H  pip install youtube-dl
