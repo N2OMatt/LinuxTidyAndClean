@@ -1,9 +1,10 @@
 {
-    "color_scheme": "Packages/User/Morrowind.tmtheme",
-    // "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
-    "dictionary": "Packages/Language - English/en_US.dic",
-    "hot_exit": false,
+
+    "dictionary"  : "Packages/Language - English/en_US.dic",
+    "hot_exit"    : false,
+
     //Interface
+    "color_scheme"            : "Packages/User/Morrowind.tmtheme",
     "bold_folder_labels"      : true,
     "draw_minimap_border"     : true,
     "fade_fold_buttons"       : false,
@@ -13,6 +14,7 @@
     "show_line_endings"       : true,
     "word_wrap"               : false,
     "highlight_modified_tabs" : true,
+
     //Editor
     "auto_indent"                       : true,
     "default_line_ending"               : "unix",
@@ -22,15 +24,13 @@
     "trim_automatic_white_space"        : true,
     "trim_trailing_white_space_on_save" : true,
     "draw_white_space"                  : "all",
+
     //FONT
     // "font_face"      : "Menlo",
-    "font_face"      : "Ubuntu Mono",
-    "font_size"      : 13.5,
+    "font_face"      : "Meslo LG S",
+    "font_size"      : 12,
     "highlight_line" : true,
-    // Valid options are "no_bold", "no_italic", "no_antialias", "gray_antialias",
-    // "subpixel_antialias", "no_round" (OS X only), "gdi" (Windows only) and
-    // "directwrite" (Windows only)
-    "font_options": ["no_italic", "bold"],
+    "font_options"   : ["no_italic", "bold"],
 
 
     //OTHER
