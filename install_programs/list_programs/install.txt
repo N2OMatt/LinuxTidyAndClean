@@ -4,53 +4,43 @@
 linux-source
 build-essential
 
-# Compilers.
+## Compilers ###################################################################
 clang
 g++
 
-# Debuggers.
-ddd
-
-# Build Tools.
+## Build Tools #################################################################
 cmake
 cmake-extras
 cmake-qt-gui
 
-# Documentation.
+## Documentation ##############################################################
 cloc
 doxygen
 doxygen-doc
 doxygen-gui
 
-# Git.
+## Git #########################################################################
 git
 git-doc
 git-extras
 git-gui
-git-sh
 
-# Python packages.
+## Python packages #############################################################
 python-dev
 python-pip
 python-pygame
 python-pyglet
 python-qt4
-python-qt4
-python-termcolor
 
-# Ruby.
-ruby
-ruby-dev
 
-# Editors
-pycharm
+## Editors / IDEs ##############################################################
 sublime-text-installer
-retext
-eclipse
-eclipse-cdt
-eclipse-cdt-autotools
+codeblocks
+codeblocks-common
+codeblocks-contrib
 
-# Libs
+
+## Libs ########################################################################
 freeglut3-dev
 libfreetype6-dev
 libglew-dev
@@ -61,20 +51,14 @@ libudev-dev
 libxcb-image0-dev
 libxrandr-dev
 
-# PHP + MySQL
+
+## PHP + MySQL #################################################################
 apache2
-libapache2-mod-auth-mysql
-libapache2-mod-php5
 mysql-client
 mysql-common
 mysql-server
 mysql-utilities
-php5
-php5-cli
-php5-common
-php5-mcrypt
-php5-mysql
-php5-mysql
+
 
 
 ################################################################################
@@ -82,43 +66,43 @@ php5-mysql
 ################################################################################
 tree
 screen
-openssh-client
-openssh-server
 xterm
-ncdu
+code2html
+
 
 ################################################################################
 ## Other                                                                      ##
 ################################################################################
-filezilla
 chromium-browser
-copy
+gnome-terminal
+filezilla
 ubuntu-restricted-extras
-youtube-dl
+
 
 ################################################################################
 ## Image/3D                                                                   ##
 ################################################################################
-audacity
 blender
 gimp
 tiled
 imagemagick
 
+
 ################################################################################
-## Audio/Video
+## Audio/Video                                                                ##
 ################################################################################
+audacity
 cheese
 vlc
 clementine
 ffmpeg
 
+
 ################################################################################
 ## Study                                                                      ##
 ################################################################################
-geogebra
-tunesviewer
 xournal
+
 
 ################################################################################
 ## VBOX                                                                       ##
@@ -128,6 +112,7 @@ virtualbox-dkms
 virtualbox-guest-additions-iso
 virtualbox-guest-dkms
 virtualbox-guest-utils
+
 
 ################################################################################
 ## Emulators                                                                  ##
