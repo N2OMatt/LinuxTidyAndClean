@@ -1,3 +1,8 @@
+## General
+firefox*
+onboard*
+gnome-orca
+
 #Xubuntu Stuff
 orage
 parole
@@ -23,6 +28,7 @@ xfce4-dict
 mousepad
 
 #UbuntuMate Stuff
+mate-terminal
 gucharmap
 pluma
 galculator
