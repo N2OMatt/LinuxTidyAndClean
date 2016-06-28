@@ -5,6 +5,7 @@ import os;
 import getopt;
 import sys;
 
+
 ################################################################################
 # PPA                                                                          #
 ################################################################################
@@ -31,6 +32,7 @@ def install_ppa(ppa_lines):
     if(len(ppa_to_add) != 0):
         os.system("sudo apt-get update && sudo apt-get upgrade");
 
+
 ################################################################################
 # Install                                                                      #
 ################################################################################
@@ -50,6 +52,7 @@ def install_pkgs(install_lines):
         print "Install package ({})".format(pkg_name);
         install_cmd = "sudo apt-get install -y {}".format(pkg_name);
         os.system(install_cmd);
+
 
 ################################################################################
 # Purge                                                                        #
@@ -91,8 +94,10 @@ def get_all_lines_from_files(files_list):
 
     return lines;
 
+
 def show_help():
     print "Help";
+
 
 ################################################################################
 # Script initializaton                                                         #
@@ -118,8 +123,8 @@ def main():
         key = key.lstrip("-");
 
         if(key == "install"): install_filenames.append(value);
-        if(key == "purge"):   purge_filenames.append(value);
-        if(key == "ppa"):     ppa_filenames.append(value);
+        if(key == "purge"  ): purge_filenames.append  (value);
+        if(key == "ppa"    ): ppa_filenames.append    (value);
 
     install_lines = get_all_lines_from_files(install_filenames);
     purge_lines   = get_all_lines_from_files(purge_filenames);
@@ -129,4 +134,6 @@ def main():
     install_pkgs(install_lines);
     purge_pkgs(purge_lines);
 
-main();
+
+if __name__ == '__main__':
+    main()
