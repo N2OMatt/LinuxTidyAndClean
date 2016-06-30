@@ -1,0 +1,17 @@
+[
+
+    //Override the Control + Tab to go to next/prev tab
+    { "keys": ["ctrl+pagedown"], "command": "" },
+    { "keys": ["ctrl+pageup"], "command": "" },
+
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+
+    //Comment separators adders
+    {
+        "keys": ["ctrl+/"],
+        "command": "insert_snippet",
+        "args": { "name": "Packages/User/cpp_comment.sublime-snippet" }
+    }
+]
