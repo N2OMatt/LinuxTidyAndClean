@@ -8,10 +8,19 @@
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 
 
+    { "keys": ["ctrl+k", "ctrl+b"], "command": "toggle_side_bar" },
+
     //Comment separators adders
+    // C++
     {
-        "keys": ["ctrl+/"],
+        "keys": ["ctrl+k","ctrl+/"],
         "command": "insert_snippet",
         "args": { "name": "Packages/User/cpp_comment.sublime-snippet" }
+    },
+    // SH / Python
+    {
+        "keys": ["ctrl+k","ctrl+3"],
+        "command": "insert_snippet",
+        "args": { "name": "Packages/User/sh_comment.sublime-snippet" }
     }
 ]

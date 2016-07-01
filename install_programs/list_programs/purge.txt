@@ -39,6 +39,7 @@ rhythmbox*
 guvcview
 tilda
 libreoffice-*
+synapse
 
 #Ubuntu Stuff.
 brasero*
