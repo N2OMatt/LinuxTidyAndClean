@@ -20,3 +20,7 @@ sudo -H pip install cowtermcolor
 
 # Rainbomstream
 sudo -H pip install rainbowstream
+
+# Pyinstaller
+sudo -H pip install pyinstaller
+
