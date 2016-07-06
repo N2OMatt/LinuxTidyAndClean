@@ -24,3 +24,6 @@ sudo -H pip install rainbowstream
 # Pyinstaller
 sudo -H pip install pyinstaller
 
+# Grip
+sudo -H pip install grip
+
