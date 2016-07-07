@@ -71,7 +71,12 @@ libsdl2-net-dev
 libsdl2-ttf-2.0-0
 libsdl2-ttf-dbg
 libsdl2-ttf-dev
-
+## Monogame
+libopenal-dev
+mono-runtime
+monodevelop
+gtk-sharp3
+referenceassemblies-pcl
 
 
 ## PHP + MySQL #################################################################
@@ -91,7 +96,7 @@ screen
 xterm
 code2html
 xdotool
-
+markdown
 
 ################################################################################
 ## Other                                                                      ##
@@ -120,6 +125,7 @@ vlc
 clementine
 ffmpeg
 pavucontrol
+
 
 ################################################################################
 ## Study                                                                      ##
