@@ -12,6 +12,8 @@ g++
 cmake
 cmake-extras
 cmake-qt-gui
+autotools
+automake
 
 ## Documentation ##############################################################
 cloc
