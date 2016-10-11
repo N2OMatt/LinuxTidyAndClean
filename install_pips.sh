@@ -7,8 +7,8 @@ sudo -H pip install --upgrade pip
 sudo -H pip install wget
 
 # Gitcheck
-sudo -H pip install git+git://github.com/badele/gitcheck.git
 sudo -H pip install colrored
+sudo -H pip install git+git://github.com/badele/gitcheck.git
 # Git Archive
 sudo -H pip install git-archive-all
 
