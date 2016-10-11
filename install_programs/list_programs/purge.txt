@@ -40,6 +40,7 @@ guvcview
 tilda
 libreoffice-*
 synapse
+deja-dup
 
 #Ubuntu Stuff.
 brasero*
