@@ -10,8 +10,7 @@
 
 
 DOWNLOAD_URL=https://dl.google.com/dl/android/studio/ide-zips/2.2.1.0/android-studio-ide-145.3330264-linux.zip
-# DOWNLOAD_PATH=$(mktemp -d)
-DOWNLOAD_PATH="/home/n2omatt/Desktop";
+DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/AndroidDev";
 
 
