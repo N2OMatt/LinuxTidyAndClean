@@ -27,7 +27,7 @@
 
     //FONT
     // "font_face"      : "Menlo",
-    "font_face"      : "Meslo LG S",
+    "font_face"      : "Meslo LG S DZ",
     "font_size"      : 12,
     "highlight_line" : true,
     "font_options"   : ["no_italic", "bold"],
