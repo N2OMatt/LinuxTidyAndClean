@@ -50,6 +50,13 @@ sudo ln -sf /usr/local/lib/libfmod.so /usr/local/lib/libfmod.so.6
 sudo ldconfig;
 
 
+## Create an script just to call the cocos program.
+## So all of our tools can just call it.
+echo "#!/bin/bash" | sudo tee /usr/local/bin/cocos-console
+echo "$INSTALL_PATH/tools/cocos2d-console/bin/cocos" '$@' | sudo tee --append /usr/local/bin/cocos-console
+sudo chmod 755 /usr/local/bin/cocos-console
+
+
 ## Restore the CWD
 cd -
 echo "done..."
