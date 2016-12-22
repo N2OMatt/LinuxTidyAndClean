@@ -89,6 +89,11 @@ libncurses5:i386
 libstdc++6:i386
 lib32z1
 lib32bz2-1.0
+## Unity ?
+lib32gcc1
+lib32stdc++6
+libpq5
+npm
 
 
 ## PHP + MySQL #################################################################
