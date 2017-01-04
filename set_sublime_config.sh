@@ -1,4 +1,11 @@
 #!/bin/bash
+HOST=$(uname -s);
 
-#Copy all sublime configurations to its dir.
-cp -r ./sublime_config/* ~/.config/sublime-text-3/Packages/User/
+OSX_PATH="$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
+LINUX_PATH="$HOME/.config/sublime-text-3/Packages/User/";
+
+if [ "$HOST" == "Darwin" ]; then
+    cp -Rv ./sublime_config/* "$OSX_PATH";
+else
+    cp -Rv ./sublime_config/* "$LINUX_PATH";
+fi;
