@@ -9,14 +9,13 @@
 ################################################################################
 
 
-DOWNLOAD_URL=http://cdn.cocos2d-x.org/cocos2d-x-3.13.1.zip
+DOWNLOAD_URL="http://cdn.cocos2d-x.org/cocos2d-x-3.13.1.zip"
 DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/cocos2d-x-3.13.1";
 
 ## Download.
 echo "Downloading...";
-wget $DOWNLOAD_URL -P $DST_PATH;
-
+wget $DOWNLOAD_URL -P $DOWNLOAD_PATH;
 
 ## Uncompress
 echo "Uncompressing...";

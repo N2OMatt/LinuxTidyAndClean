@@ -9,19 +9,20 @@
 ################################################################################
 
 
-DOWNLOAD_URL=https://dl.google.com/dl/android/studio/ide-zips/2.2.1.0/android-studio-ide-145.3330264-linux.zip
+STUDIO_FILE="android-studio-ide-162.3764568-linux.zip"
+DOWNLOAD_URL=https://dl.google.com/dl/android/studio/ide-zips/2.3.0.8/$STUDIO_FILE
 DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/AndroidDev";
 
 
 ## Download.
 echo "Downloading...";
-# wget $DOWNLOAD_URL -P $DOWNLOAD_PATH;
+wget $DOWNLOAD_URL -P $DOWNLOAD_PATH;
 
 ## Uncompress
 echo "Uncompressing...";
-cd $DOWNLOAD_PATH
-unzip -o android-studio-ide-145.3330264-linux.zip
+cd $DOWNLOAD_PATH;
+unzip -o "$STUDIO_FILE";
 
 
 ## Install
