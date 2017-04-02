@@ -4,9 +4,11 @@
 linux-source
 build-essential
 
+
 ## Compilers ###################################################################
 clang
 g++
+
 
 ## Build Tools #################################################################
 cmake
@@ -15,17 +17,20 @@ cmake-qt-gui
 autotools
 automake
 
+
 ## Documentation ##############################################################
 cloc
 doxygen
 doxygen-doc
 doxygen-gui
 
+
 ## Git #########################################################################
 git
 git-doc
 git-extras
 git-gui
+
 
 ## Python packages #############################################################
 python-dev
@@ -104,7 +109,6 @@ mysql-server
 mysql-utilities
 
 
-
 ################################################################################
 ## Utils                                                                      ##
 ################################################################################
@@ -116,6 +120,8 @@ xdotool
 markdown
 sshfs
 apt-file
+okular
+
 
 ################################################################################
 ## Other                                                                      ##
@@ -155,11 +161,11 @@ xournal
 ################################################################################
 ## VBOX                                                                       ##
 ################################################################################
-virtualbox
-virtualbox-dkms
-virtualbox-guest-additions-iso
-virtualbox-guest-dkms
-virtualbox-guest-utils
+#virtualbox
+#virtualbox-dkms
+#virtualbox-guest-additions-iso
+#virtualbox-guest-dkms
+#virtualbox-guest-utils
 
 
 ################################################################################
@@ -168,5 +174,3 @@ virtualbox-guest-utils
 dosbox
 zsnes
 stella
-higan
-dgen

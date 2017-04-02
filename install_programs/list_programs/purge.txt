@@ -1,5 +1,4 @@
 ## General
-firefox*
 onboard*
 gnome-orca
 
@@ -41,6 +40,7 @@ tilda
 libreoffice-*
 synapse
 deja-dup
+atril*
 
 #Ubuntu Stuff.
 brasero*
