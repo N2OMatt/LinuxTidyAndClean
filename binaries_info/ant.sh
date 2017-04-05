@@ -8,8 +8,8 @@
 ## Install the ANT                                                            ##
 ################################################################################
 
-
-DOWNLOAD_URL=http://mirror.nbtelecom.com.br/apache//ant/binaries/apache-ant-1.9.7-bin.zip
+ANT_FILE="apache-ant-1.10.1-bin.zip"
+DOWNLOAD_URL=http://mirror.nbtelecom.com.br/apache//ant/binaries/$ANT_FILE
 DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/AndroidDev";
 
@@ -21,12 +21,12 @@ wget $DOWNLOAD_URL -P $DOWNLOAD_PATH;
 ## Uncompress
 echo "Uncompressing...";
 cd $DOWNLOAD_PATH
-unzip -o apache-ant-1.9.7-bin.zip
+unzip -o "$ANT_FILE"
 
 ## Install
 echo "Installing...";
 mkdir -p $INSTALL_PATH
-mv apache-ant-1.9.7 $INSTALL_PATH/apache-ant-1.9.7
+mv "$ANT_FILE" "$INSTALL_PATH/$ANT_FILE"
 
 ## Done
 cd -
