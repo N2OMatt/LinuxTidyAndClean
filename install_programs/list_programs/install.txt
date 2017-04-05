@@ -54,6 +54,8 @@ libxcb-image0-dev
 libxrandr-dev
 libglfw3
 libglfw3-dev
+libsqlite3-0
+libsqlite3-dev
 ## SDL
 libsdl2-2.0-0
 libsdl2-dbg
