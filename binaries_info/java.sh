@@ -10,11 +10,11 @@
 ## www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html       ##
 ################################################################################
 
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo apt-get update -y
 
 ## Automatically accept the license.
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 
 ## Install.
-sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-installer -y
