@@ -33,7 +33,7 @@ mv -f $DOWNLOAD_PATH/cocos2d-x-3.13.1/* $INSTALL_PATH
 ## Run the installation scripts.
 cd $INSTALL_PATH
 chmod 744 ./build/install-deps-linux.sh
-sudo ./build/install-deps-linux.sh
+yes | sudo ./build/install-deps-linux.sh
 
 chmod 744 ./setup.py
 ./setup.py
