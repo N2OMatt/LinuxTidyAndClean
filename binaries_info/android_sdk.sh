@@ -9,27 +9,44 @@
 ################################################################################
 
 
+################################################################################
+## Variables                                                                  ##
+################################################################################
 DOWNLOAD_URL=https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/AndroidDev";
 
-
-## Download.
+################################################################################
+## Download                                                                   ##
+################################################################################
 echo "Downloading...";
 wget $DOWNLOAD_URL -P $DOWNLOAD_PATH;
 
-## Uncompress
+################################################################################
+## Uncompresss                                                                ##
+################################################################################
 echo "Uncompressing...";
 cd $DOWNLOAD_PATH
 tar zxvf android-sdk_r24.4.1-linux.tgz
 
-
-## Install
+################################################################################
+## Install                                                                    ##
+################################################################################
 echo "Installing...";
 mkdir -p $INSTALL_PATH;
 mv -f android-sdk-linux $INSTALL_PATH;
 
-
-## Done
-cd -
-echo "Done...";
+################################################################################
+## Update .bashrc                                                             ##
+################################################################################
+FOUND=$(cat ~/.bashrc | grep "ANDROID_SDK_ROOT=$INSTALL_PATH/android-sdk-linux");
+if [ -n "$FOUND" ]; then
+    echo "Found: " $FOUND
+else
+    echo "######################################################################"     >> ~/.bashrc;
+    echo "## ANDROID SDK ROOT                                                 ##"     >> ~/.bashrc;
+    echo "######################################################################"     >> ~/.bashrc;
+    echo "export ANDROID_SDK_ROOT=$INSTALL_PATH/android-sdk-linux"                    >> ~/.bashrc;
+    echo 'export PATH=$ANDROID_SDK_ROOT:$PATH'                                        >> ~/.bashrc;
+    echo 'export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH' >> ~/.bashrc;
+fi;
