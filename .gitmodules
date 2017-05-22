@@ -1,0 +1,3 @@
+[submodule "sublimetext3_config"]
+	path = sublimetext3_config
+	url = https://github.com/n2omatt/sublimetext3_config
