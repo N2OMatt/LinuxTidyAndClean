@@ -1,11 +1,23 @@
 #!/bin/bash
-HOST=$(uname -s);
+################################################################################
+## File    : install.sh                                                       ##
+## Project : LinuxTidyAndClean                                                ##
+## Date    : May 22, 2017                                                     ##
+## Author  : n2omatt@amazingcow.com                                           ##
+## License : GPLv3                                                            ##
+##                                                                            ##
+## Description :                                                              ##
+##   Install the sublime configuration :D                                     ##
+################################################################################
 
-OSX_PATH="$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
-LINUX_PATH="$HOME/.config/sublime-text-3/Packages/User/";
 
-if [ "$HOST" == "Darwin" ]; then
-    cp -Rv ./sublime_config/* "$OSX_PATH";
-else
-    cp -Rv ./sublime_config/* "$LINUX_PATH";
-fi;
+## Fist initiliaze the repository since the sublime config is on submodule.
+##   If the repo is already initialized, this will be a no op...
+git submodule update --init --recursive
+
+## Update the repo to the latest revision.
+cd ./sublimetext3_config;
+git pull origin master
+
+## Install ;D
+./install.sh
