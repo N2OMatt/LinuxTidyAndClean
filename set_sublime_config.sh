@@ -11,10 +11,6 @@
 ################################################################################
 
 
-## Fist initiliaze the repository since the sublime config is on submodule.
-##   If the repo is already initialized, this will be a no op...
-git submodule update --init --recursive
-
 ## Update the repo to the latest revision.
 cd ./sublimetext3_config;
 git pull origin master
