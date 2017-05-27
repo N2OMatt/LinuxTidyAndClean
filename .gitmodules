@@ -4,3 +4,6 @@
 [submodule "dots"]
 	path = dots
 	url = https://github.com/N2OMatt/dots
+[submodule "DownloadRepos"]
+	path = DownloadRepos
+	url = https://github.com/N2OMatt/DownloadRepos
