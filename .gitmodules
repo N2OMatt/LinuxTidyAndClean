@@ -7,3 +7,6 @@
 [submodule "DownloadRepos"]
 	path = DownloadRepos
 	url = https://github.com/N2OMatt/DownloadRepos
+[submodule "bash-status-line"]
+	path = bash-status-line
+	url = http://github.com/n2omatt/bash-status-line
