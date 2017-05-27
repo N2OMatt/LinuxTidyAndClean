@@ -26,11 +26,11 @@ def install_ppa(ppa_lines):
 
     for ppa_name in ppa_to_add:
         print "Adding PPA({})".format(ppa_name);
-        add_cmd = "sudo apt-add-repository ppa:{}".format(ppa_name);
+        add_cmd = "sudo apt-add-repository ppa:{} -y".format(ppa_name);
         os.system(add_cmd);
 
     if(len(ppa_to_add) != 0):
-        os.system("sudo apt-get update && sudo apt-get upgrade");
+        os.system("sudo apt-get update -y && sudo apt-get upgrade -y");
 
 
 ################################################################################
