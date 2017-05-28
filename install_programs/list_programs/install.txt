@@ -123,13 +123,13 @@ markdown
 sshfs
 apt-file
 okular
-
+plank
 
 ################################################################################
 ## Other                                                                      ##
 ################################################################################
 chromium-browser
-gnome-terminal
+##gnome-terminal
 filezilla
 ubuntu-restricted-extras
 
