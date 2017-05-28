@@ -125,12 +125,13 @@ apt-file
 okular
 transmission
 transmission-gtk
+plank
 
 ################################################################################
 ## Other                                                                      ##
 ################################################################################
 chromium-browser
-gnome-terminal
+##gnome-terminal
 filezilla
 ubuntu-restricted-extras
 
