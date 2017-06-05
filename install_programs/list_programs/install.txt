@@ -126,6 +126,7 @@ okular
 transmission
 transmission-gtk
 plank
+file-roller
 
 ################################################################################
 ## Other                                                                      ##
@@ -178,3 +179,8 @@ xournal
 dosbox
 zsnes
 stella
+## Libs for Kega
+libgtk2.0-0:i386
+libsm6:i386
+
+
