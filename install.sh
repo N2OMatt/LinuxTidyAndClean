@@ -3,8 +3,6 @@ git submodule update --init --recursive
 
 ./clean_home_folder.sh
 ./create_bashprofile.sh
-./set_git_config.sh
-./set_sublime_config.sh
 
 ./download_all_repos.sh
 ./install_amazingcow_programs.sh
@@ -16,3 +14,6 @@ git submodule update --init --recursive
 ./install_binaries.sh
 ./install_pip.sh
 
+./set_git_config.sh
+./set_sublime_config.sh
+./set_monodevelop_config.sh
