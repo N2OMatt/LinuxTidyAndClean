@@ -17,3 +17,4 @@ git submodule update --init --recursive
 ./set_git_config.sh
 ./set_sublime_config.sh
 ./set_monodevelop_config.sh
+./set_qtcreator_config.sh
