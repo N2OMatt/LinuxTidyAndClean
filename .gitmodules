@@ -10,3 +10,6 @@
 [submodule "bash-status-line"]
 	path = bash-status-line
 	url = http://github.com/n2omatt/bash-status-line
+[submodule "monodevelop_config"]
+	path = monodevelop_config
+	url = https://github.com/n2omatt/monodevelop_config
