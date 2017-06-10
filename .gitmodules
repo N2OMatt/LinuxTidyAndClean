@@ -13,3 +13,6 @@
 [submodule "monodevelop_config"]
 	path = monodevelop_config
 	url = https://github.com/n2omatt/monodevelop_config
+[submodule "qtcreator_config"]
+	path = qtcreator_config
+	url = http://github.com/n2omatt/qtcreator_config
