@@ -11,10 +11,10 @@
 
 DOWNLOAD_URL=https://github.com/andreberg/Meslo-Font/archive/v1.2.1.tar.gz
 DOWNLOAD_PATH=$(mktemp -d);
-INSTALL_PATH="/home/n2omatt/.fonts";
+INSTALL_PATHS="$HOME/.fonts /usr/share/fonts ";
 
 echo "DOWNLOAD_PATH : $DOWNLOAD_PATH";
-echo "INSTALL_PATH  : $INSTALL_PATH";
+echo "INSTALL_PATHS  : $INSTALL_PATHS";
 
 ## Download
 echo "Downloading...";
@@ -34,8 +34,10 @@ unzip -o "Meslo LG DZ v1.2.1.zip"
 
 ## Install
 echo "Installing..."
-mkdir -p $INSTALL_PATH;
-cp  "Meslo LG DZ v1.2.1"/*.ttf $INSTALL_PATH
+for INSTALL_PATH in $INSTALL_PATHS; do
+    mkdir -p $INSTALL_PATH;
+    cp  "Meslo LG DZ v1.2.1"/*.ttf $INSTALL_PATH
+done;
 
 fc-cache -f -v ##Update the cache.
 
