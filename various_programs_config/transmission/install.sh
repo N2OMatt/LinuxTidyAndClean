@@ -8,11 +8,12 @@ cd $(dirname $(readlink -f "$0"));
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-DST_DIR="$HOME/.config/transmission/";
+DST_DIR="$HOME/.config/transmission/data";
 SRC_DIR="data";
+
 
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
 mkdir -p "$DST_DIR";
-cp -rv "$SRC_DIR"/* $DST_DIR;
+cat $SRC_DIR/settings.template | sed s#_HOME_#"$HOME"#g > $DST_DIR/settings.json
