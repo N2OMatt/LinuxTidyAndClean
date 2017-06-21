@@ -127,6 +127,8 @@ transmission
 transmission-gtk
 plank
 file-roller
+meld
+
 
 ################################################################################
 ## Other                                                                      ##
