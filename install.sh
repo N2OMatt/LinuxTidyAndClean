@@ -20,6 +20,7 @@ git submodule update --init --recursive
 ## Configure everything else.
 ./set_git_config.sh
 ./set_sublime_config.sh
-./set_monodevelop_config.sh
+./set_monodevelop_config.sh --force         ## Install plain Monodevelop config.
+./set_monodevelop_config.sh --force --unity ## Install Unity Monodevelop config.
 ./set_qtcreator_config.sh
 ./set_various_programs_config.sh
