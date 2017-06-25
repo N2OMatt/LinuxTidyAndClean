@@ -13,7 +13,7 @@
 ################################################################################
 ANT_FILE="apache-ant-1.10.1-bin.zip"
 DOWNLOAD_URL=http://mirror.nbtelecom.com.br/apache/ant/binaries/$ANT_FILE
-DOWNLOAD_PATH="/home/n2omatt/Desktop" ##$(mktemp -d)
+DOWNLOAD_PATH=$(mktemp -d)
 INSTALL_PATH="/home/n2omatt/Documents/Packages/AndroidDev";
 
 
