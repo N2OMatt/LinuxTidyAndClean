@@ -36,13 +36,13 @@ _ANT_ROOT=$(find $INSTALL_PATH -maxdepth 1 -iname "*ant*" -type d );
 ################################################################################
 ## Update .bashrc                                                             ##
 ################################################################################
-FOUND=$(cat ~/.bashrc | grep "ANT_ROOT=$INSTALL_PATH/$_ANT_ROOT");
+FOUND=$(cat ~/.bashrc | grep "ANT_ROOT=${_ANT_ROOT}");
 if [ -n "$FOUND" ]; then
     echo "Found: " $FOUND
 else
     echo "######################################################################" >> ~/.bashrc;
     echo "## ANT_ROOT                                                         ##" >> ~/.bashrc;
     echo "######################################################################" >> ~/.bashrc;
-    echo "export ANT_ROOT=$INSTALL_PATH/$_ANT_ROOT"                               >> ~/.bashrc;
-    echo 'export PATH=$ANT_ROOT:$PATH'                                            >> ~/.bashrc;
+    echo "export ANT_ROOT=${_ANT_ROOT}"                                           >> ~/.bashrc;
+    echo 'export PATH=$ANT_ROOT/bin:$PATH'                                        >> ~/.bashrc;
 fi;
