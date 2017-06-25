@@ -1,6 +1,8 @@
 DOWNLOAD_URL=http://www.monogame.net/releases/v3.5.1/monogame-sdk.run
 DST_PATH=$(mktemp -d);
 
+sudo /opt/MonoGameSDK/uninstall.sh
+
 echo "Downloading Mono Game";
 wget $DOWNLOAD_URL -P $DST_PATH;
 
