@@ -2,7 +2,7 @@
 git submodule update --init --recursive
 ## Install the programs that system need to run everything else.
 ./install_programs.sh
-./install_pip.sh
+./install_pips.sh
 ./install_binaries.sh
 
 ## Setup the home folder.
