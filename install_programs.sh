@@ -1,4 +1,15 @@
 #!/bin/bash
+##----------------------------------------------------------------------------##
+## File      : install_programs.sh                                            ##
+## Project   : LinuxTidyAndClean                                              ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2017                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+##                                                                            ##
+## Description:                                                               ##
+##                                                                            ##
+##----------------------------------------------------------------------------##
 
 ## COWNOTE(n2omatt): This script just works for GNU/Linux since 
 ##    it'll install a lot of stuff from apt-get.

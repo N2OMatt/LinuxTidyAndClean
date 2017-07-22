@@ -1,4 +1,17 @@
 #!/bin/bash
+##----------------------------------------------------------------------------##
+## File      : install_binaries.sh                                            ##
+## Project   : LinuxTidyAndClean                                              ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2017                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+##                                                                            ##
+## Description:                                                               ##
+##   Iterate for all scripts on ./binaries_info directory and                 ##
+##   calls each script there.                                                 ##
+##   The actual installation stuff is inside of those scripts.                ##
+##----------------------------------------------------------------------------##
 
 ## COWNOTE(n2omatt): I'm setting it just for GNU/Linux for now, 
 ##   the binaries scripts are set just to download the GNU/Linux

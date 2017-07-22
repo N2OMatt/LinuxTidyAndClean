@@ -1,4 +1,16 @@
 #!/bin/bash
+##----------------------------------------------------------------------------##
+## File      : install_amazingcow_programs.sh                                 ##
+## Project   : LinuxTidyAndClean                                              ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2017                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+##                                                                            ##
+## Description:                                                               ##
+##   Installs the most usefuls AmazingCow's tools.                            ##
+##   To add /remove a tool just edit the PROGRAMS var.                        ##
+##----------------------------------------------------------------------------##
 
 AMAZINGCOW_DIR="$HOME/Documents/Projects/AmazingCow/AmazingCow-Tools/";
 PROGRAMS="Gosh                   \

@@ -1,9 +1,22 @@
 #!/bin/bash
+##----------------------------------------------------------------------------##
+## File      : install.sh                                                     ##
+## Project   : LinuxTidyAndClean                                              ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2017                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+##                                                                            ##
+## Description:                                                               ##
+##   Just call all other scripts to perform the actual installation.          ##
+##----------------------------------------------------------------------------##
+
 git submodule update --init --recursive
+
 ## Install the programs that system need to run everything else.
 ./install_programs.sh
-./install_pips.sh
 ./install_binaries.sh
+./install_pips.sh
 
 ## Setup the home folder.
 ./clean_home_folder.sh

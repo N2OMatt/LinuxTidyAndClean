@@ -1,15 +1,15 @@
 #!/bin/bash
-################################################################################
-## File    : install.sh                                                       ##
-## Project : LinuxTidyAndClean                                                ##
-## Date    : May 10, 2017                                                     ##
-## Author  : n2omatt@amazingcow.com                                           ##
-## License : GPLv3                                                            ##
+##----------------------------------------------------------------------------##
+## File      : set_various_programs_config.sh                                 ##
+## Project   : LinuxTidyAndClean                                              ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2017                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2017                                   ##
 ##                                                                            ##
-## Description :                                                              ##
-##   Install the various programs configurations :D                           ##
-################################################################################
-
+## Description:                                                               ##
+##                                                                            ##
+##----------------------------------------------------------------------------##
 
 ## Update the repo to the latest revision.
 cd ./various_programs_config;
