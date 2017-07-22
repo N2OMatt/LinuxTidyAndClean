@@ -1,5 +1,14 @@
 #!/bin/bash
 
+## COWNOTE(n2omatt): I'm setting it just for GNU/Linux for now, 
+##    but it probably works well for OSX too, but I'm not 
+##    willing to test it on Amanda right now....     
+CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
+if [ "$CURR_OS" != "gnu_linux" ]; then
+    echo "[$0] OS ($CURR_OS) isn't gnu_linux - Aborting...";
+    exit 0;
+fi;
+
 ## Pip itself.
 sudo -H pip install --upgrade pip
 

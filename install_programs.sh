@@ -1,5 +1,14 @@
 #!/bin/bash
 
+## COWNOTE(n2omatt): This script just works for GNU/Linux since 
+##    it'll install a lot of stuff from apt-get.
+##    Actually it only works for Debian based OSes.
+CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
+if [ "$CURR_OS" != "gnu_linux" ]; then
+    echo "[$0] OS ($CURR_OS) isn't GNU/Linux - Aborting...";
+    exit 0;
+fi;
+
 ./install_programs/pre_run.sh
 
 #Add the ppas and install everything inside the install_base.
