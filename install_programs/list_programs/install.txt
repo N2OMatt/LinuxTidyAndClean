@@ -168,11 +168,11 @@ xournal
 ################################################################################
 ## VBOX                                                                       ##
 ################################################################################
-#virtualbox
-#virtualbox-dkms
-#virtualbox-guest-additions-iso
-#virtualbox-guest-dkms
-#virtualbox-guest-utils
+virtualbox
+virtualbox-dkms
+virtualbox-guest-additions-iso
+virtualbox-guest-dkms
+virtualbox-guest-utils
 
 
 ################################################################################
