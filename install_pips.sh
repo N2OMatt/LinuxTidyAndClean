@@ -11,42 +11,50 @@
 ##                                                                            ##
 ##----------------------------------------------------------------------------##
 
-## COWNOTE(n2omatt): I'm setting it just for GNU/Linux for now, 
-##    but it probably works well for OSX too, but I'm not 
-##    willing to test it on Amanda right now....     
+## COWNOTE(n2omatt): I'm setting it just for GNU/Linux for now,
+##    but it probably works well for OSX too, but I'm not
+##    willing to test it on Amanda right now....
 CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
-if [ "$CURR_OS" != "gnu_linux" ]; then
-    echo "[$0] OS ($CURR_OS) isn't gnu_linux - Aborting...";
-    exit 0;
+SUDO="sudo -H";
+PIP="pip install";
+
+if [ "$CURR_OS" == "cygwin" ]; then
+    SUDO="sudo";
+    PIP="easy_install-2.7";
 fi;
 
 ## Pip itself.
-sudo -H pip install --upgrade pip
+if [ "$PIP" == "pip install" ]; then
+    $SUDO $PIP  --upgrade pip
+fi;
+
+## COWTODO(n2omatt): Make all the programs a list and iterate in a for loop.
+##  The way that we're doing is tooo ugly!
 
 # wget
-sudo -H pip install wget
+$SUDO $PIP wget
 
 # Gitcheck
-sudo -H pip install colored
-sudo -H pip install git+git://github.com/badele/gitcheck.git
+$SUDO $PIP colored
+$SUDO $PIP git+git://github.com/badele/gitcheck.git
 # Git Archive
-sudo -H pip install git-archive-all
+$SUDO $PIP git-archive-all
 
 # Youtube-dl
-sudo -H  pip install youtube-dl
+$SUDO $PIP youtube-dl
 
 # AmazingCow - CowTermcolor
-sudo -H pip install cowtermcolor
+$SUDO $PIP cowtermcolor
 
 # Rainbomstream
-sudo -H pip install rainbowstream
+$SUDO $PIP rainbowstream
 
 # Pyinstaller
-sudo -H pip install pyinstaller
+$SUDO $PIP pyinstaller
 
 # Grip
-sudo -H pip install grip
+$SUDO $PIP grip
 
 # Statistics
-sudo -H pip install statistics
+$SUDO $PIP statistics
 
