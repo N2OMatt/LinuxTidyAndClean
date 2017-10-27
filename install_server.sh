@@ -17,25 +17,20 @@
 ##    Install stuff that is need for a server.                                ##
 ##---------------------------------------------------------------------------~##
 
-git submodule update --init --recursive
-
-## Install the programs that system need to run everything else.
-./install_programs.sh
-./install_pips.sh
-
-## Setup the home folder.
-./clean_home_folder.sh
-./create_bashprofile.sh
-
-## Download/Install AmazingCow stuff.
+################################################################################
+## Scripts                                                                    ##
+################################################################################
+## First we need download the repos...
 ./download_all_repos.sh
-./install_amazingcow_programs.sh
 
-## Download/Install N2OMatt stuff.
-./install_dots.sh
-./install_bash_status_line.sh
+## Install Stuff...
+./installs/programs.sh
+./installs/pips.sh
+./installs/n2omatt_programs.sh
+./installs/amazingcow_programs.sh
 
-## Configure everything else.
-./set_git_config.sh
-./set_sublime_config.sh
-./set_various_programs_config.sh
+## Lastly we need set the machine configs...
+./configs/clean_home_folder.sh
+./configs/create_bashprofile.sh
+./configs/set_git_config.sh
+./configs/set_various_programs_config.sh
