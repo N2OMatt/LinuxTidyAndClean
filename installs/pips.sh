@@ -42,6 +42,7 @@ PIPS="colored                                  \
 ## Script                                                                     ##
 ################################################################################
 for PIP in $PIPS; do
-    sudo -H pip install "$PIP";
+    sudo -H pip  install "$PIP";
+    sudo -H pip3 install "$PIP";
 done
 
