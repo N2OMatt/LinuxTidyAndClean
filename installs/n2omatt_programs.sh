@@ -23,7 +23,8 @@
 ################################################################################
 N2OMATT_DIR="$HOME/Documents/Projects/N2OMatt";
 PROGRAMS="bash-status-line \
-          dots"
+          dots             \
+          sublimetext3_config";
 
 ################################################################################
 ## Script                                                                     ##
