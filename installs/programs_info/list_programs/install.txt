@@ -35,6 +35,7 @@ git-gui
 ## Python packages #############################################################
 python-dev
 python-pip
+python3-pip
 python-pygame
 python-pyglet
 python-qt4
