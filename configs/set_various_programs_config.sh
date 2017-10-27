@@ -11,8 +11,9 @@
 ##                                                                            ##
 ##----------------------------------------------------------------------------##
 
-## Update the repo to the latest revision.
-cd ./various_programs_config;
+## COWTODO(n2omatt): CHECK THIS....
+# ## Update the repo to the latest revision.
+# cd ./various_programs_config;
 
-## Install ;D
-./install.sh
+# ## Install ;D
+# ./install.sh
