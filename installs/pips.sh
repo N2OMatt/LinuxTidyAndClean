@@ -1,60 +1,47 @@
 #!/bin/bash
-##----------------------------------------------------------------------------##
-## File      : install_pips.sh                                                ##
-## Project   : LinuxTidyAndClean                                              ##
-## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
-## Date      : 2017                                                           ##
-## License   : GPLv3                                                          ##
-## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+##~---------------------------------------------------------------------------##
+##                        ____                       _   _                    ##
+##                  _ __ |___ \ ___  _ __ ___   __ _| |_| |_                  ##
+##                 | '_ \  __) / _ \| '_ ` _ \ / _` | __| __|                 ##
+##                 | | | |/ __/ (_) | | | | | | (_| | |_| |_                  ##
+##                 |_| |_|_____\___/|_| |_| |_|\__,_|\__|\__|                 ##
+##                              www.n2omatt.com                               ##
+##  File      : pips.sh                                                       ##
+##  Project   : LinuxTidyAndClean                                             ##
+##  Date      : Oct 27, 2017                                                  ##
+##  License   : GPLv3                                                         ##
+##  Author    : n2omatt <n2omatt@amazingcow.com>                              ##
+##  Copyright : n2omatt - 2017                                                ##
 ##                                                                            ##
-## Description:                                                               ##
+##  Description :                                                             ##
 ##                                                                            ##
-##----------------------------------------------------------------------------##
+##---------------------------------------------------------------------------~##
 
-## COWNOTE(n2omatt): I'm setting it just for GNU/Linux for now,
-##    but it probably works well for OSX too, but I'm not
-##    willing to test it on Amanda right now....
+################################################################################
+## Vars                                                                       ##
+################################################################################
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)";
 CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
-SUDO="sudo -H";
-PIP="pip install";
 
-if [ "$CURR_OS" == "cygwin" ]; then
-    SUDO="sudo";
-    PIP="easy_install-2.7";
-fi;
+PIPS="colored                                  \
+      cowtermcolor                             \
+      Flask                                    \
+      git+git://github.com/badele/gitcheck.git \
+      git-archive-all                          \
+      GitPython                                \
+      grip                                     \
+      mongoengine                              \
+      pyinstaller                              \
+      pymongo                                  \
+      rainbowstream                            \
+      statistics                               \
+      wget                                     \
+      youtube-dl";
 
-## Pip itself.
-if [ "$PIP" == "pip install" ]; then
-    $SUDO $PIP  --upgrade pip
-fi;
-
-## COWTODO(n2omatt): Make all the programs a list and iterate in a for loop.
-##  The way that we're doing is tooo ugly!
-
-# wget
-$SUDO $PIP wget
-
-# Gitcheck
-$SUDO $PIP colored
-$SUDO $PIP git+git://github.com/badele/gitcheck.git
-# Git Archive
-$SUDO $PIP git-archive-all
-
-# Youtube-dl
-$SUDO $PIP youtube-dl
-
-# AmazingCow - CowTermcolor
-$SUDO $PIP cowtermcolor
-
-# Rainbomstream
-$SUDO $PIP rainbowstream
-
-# Pyinstaller
-$SUDO $PIP pyinstaller
-
-# Grip
-$SUDO $PIP grip
-
-# Statistics
-$SUDO $PIP statistics
+################################################################################
+## Script                                                                     ##
+################################################################################
+for PIP in $PIPS; do
+    sudo -H pip install "$PIP";
+done
 
