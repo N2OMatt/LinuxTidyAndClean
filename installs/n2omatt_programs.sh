@@ -6,43 +6,48 @@
 ##                 | | | |/ __/ (_) | | | | | | (_| | |_| |_                  ##
 ##                 |_| |_|_____\___/|_| |_| |_|\__,_|\__|\__|                 ##
 ##                              www.n2omatt.com                               ##
-##  File      : install_bash_status_line.sh                                   ##
+##  File      : install_amazingcow_programs.sh                                ##
 ##  Project   : LinuxTidyAndClean                                             ##
-##  Date      : May 27, 2017                                                  ##
+##  Date      : May 28, 2017                                                  ##
 ##  License   : GPLv3                                                         ##
 ##  Author    : n2omatt <n2omatt@amazingcow.com>                              ##
 ##  Copyright : n2omatt - 2017                                                ##
 ##                                                                            ##
 ##  Description :                                                             ##
-##                                                                            ##
+##    Installs the most usefuls AmazingCow's tools.                           ##
+##    To add /remove a tool just edit the PROGRAMS var.                       ##
 ##---------------------------------------------------------------------------~##
-
 
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-TARGET_DIR="$HOME/Documents/Projects/N2OMatt/bash-status-line";
+N2OMATT_DIR="$HOME/Documents/Projects/N2OMatt";
+PROGRAMS="bash-status-line \
+          dots"
 
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
-echo "--> Target directory:";
-echo "    $TARGET_DIR";
+install_program()
+{
+    echo "----> Installing $1...";
+    cd "$N2OMATT_DIR/$1"
 
-## If we already have clonned the repos we can just install the program,
-## otherwise we need clone them first.
-if [ -d "$TARGET_DIR" ]; then
-    echo "--> Already have target directory.";
-    echo "    Cleanning it...";
-    cd "$TARGET_DIR";
+    ## Check which install method we have
+    ## in the repo and use it ;D
+    [ -e "install.sh" ] && sudo ./install.sh
+    [ -e "install.py" ] && sudo ./install.py
+    [ -e "Makefile"   ] && sudo make install;
+}
 
-    git reset --hard master;
-    git pull origin master;
 
-## Otherwise clone it from github.
-else
-    ./download_all_repos.sh
-fi;
+echo "--> Installing Amazing Cow programs...";
 
-## Install!
-./install.sh
+for PROGRAM in $PROGRAMS; do
+    install_program $PROGRAM;
+done;
+
+echo "Done...";
+
+
+
