@@ -34,6 +34,7 @@ PIPS="colored                                  \
       pyinstaller                              \
       pymongo                                  \
       rainbowstream                            \
+      selenium                                 \
       statistics                               \
       wget                                     \
       youtube-dl";
