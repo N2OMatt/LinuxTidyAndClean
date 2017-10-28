@@ -23,7 +23,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)";
 CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
 
-PIPS="colored                                  \
+PIPS="beautifulsoup4                           \
+      colored                                  \
       cowtermcolor                             \
       Flask                                    \
       git+git://github.com/badele/gitcheck.git \
@@ -39,6 +40,8 @@ PIPS="colored                                  \
       wget                                     \
       youtube-dl";
 
+
+pip install
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
