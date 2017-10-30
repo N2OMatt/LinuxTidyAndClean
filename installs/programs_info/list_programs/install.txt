@@ -138,6 +138,7 @@ file-roller
 meld
 gdmap
 playonlinux
+xserver-xephyr
 
 
 ################################################################################

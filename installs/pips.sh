@@ -34,6 +34,7 @@ PIPS="beautifulsoup4                           \
       mongoengine                              \
       pyinstaller                              \
       pymongo                                  \
+      pyvirtualdisplay                         \
       rainbowstream                            \
       selenium                                 \
       statistics                               \
