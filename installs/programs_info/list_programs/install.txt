@@ -118,6 +118,8 @@ mysql-server
 mysql-utilities
 
 sqlite3
+sqlitebrowser
+
 
 ################################################################################
 ## Utils                                                                      ##
