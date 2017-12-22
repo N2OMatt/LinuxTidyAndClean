@@ -63,6 +63,8 @@ libglfw3-dev
 libsqlite3-0
 libsqlite3-dev
 libncurses5-dev
+libgit2-dev
+
 ## SDL
 libsdl2-2.0-0
 libsdl2-dbg
@@ -202,5 +204,3 @@ stella
 ## Libs for Kega
 libgtk2.0-0:i386
 libsm6:i386
-
-
