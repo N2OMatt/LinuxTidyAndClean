@@ -26,7 +26,8 @@ PROGRAMS="Gosh                   \
           COWTODO                \
           Linux_USBBootCreator   \
           GuardChecker           \
-          License_Header_Checker"
+          License_Header_Checker \
+          RepoBareBones"
 
 
 ################################################################################
