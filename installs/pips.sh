@@ -31,6 +31,7 @@ PIPS="beautifulsoup4                           \
       git-archive-all                          \
       GitPython                                \
       grip                                     \
+      lxml                                     \
       mongoengine                              \
       pyinstaller                              \
       pymongo                                  \
@@ -50,4 +51,3 @@ for PIP in $PIPS; do
     sudo -H pip  install "$PIP";
     sudo -H pip3 install "$PIP";
 done
-
