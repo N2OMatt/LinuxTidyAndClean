@@ -38,7 +38,6 @@ if [ -d "$TARGET_DIR" ]; then
     echo "    Cleanning it...";
     cd "$TARGET_DIR";
 
-    git reset --hard master;
     git pull origin master;
 
 ## Otherwise clone it from github.
