@@ -17,21 +17,27 @@
 ##    Install stuff that is need for a workstation.                           ##
 ##---------------------------------------------------------------------------~##
 
-################################################################################
+##----------------------------------------------------------------------------##
 ## Scripts                                                                    ##
-################################################################################
+##----------------------------------------------------------------------------##
+
+##------------------------------------------------------------------------------
 ## First we need download the repos...
 ./download_all_repos.sh
 
-## Install Stuff...
-./installs/programs.sh
-./install/binaries.sh
-./installs/pips.sh
-./installs/n2omatt_programs.sh
-./installs/amazingcow_programs.sh
 
-## Lastly we need set the machine configs...
+##------------------------------------------------------------------------------
+## Install the python pips.
+./installs/pips.sh
+
+##------------------------------------------------------------------------------
+## Amazing Cow and N2OMatt Programs.
+./installs/amazingcow_programs.sh
+./installs/n2omatt_programs.sh
+
+
+##------------------------------------------------------------------------------
+## Configurations that doesn't depends on the system.
 ./configs/clean_home_folder.sh
 ./configs/create_bashprofile.sh
 ./configs/set_git_config.sh
-./configs/set_various_programs_config.sh
