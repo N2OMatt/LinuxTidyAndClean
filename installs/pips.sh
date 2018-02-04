@@ -43,10 +43,12 @@ PIPS="beautifulsoup4                           \
       youtube-dl";
 
 
-pip install
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
+## Install the pips.
+sudo python  -m ensurepip;
+sudo python3 -m ensurepip;
 for PIP in $PIPS; do
     sudo -H pip  install "$PIP";
     sudo -H pip3 install "$PIP";
