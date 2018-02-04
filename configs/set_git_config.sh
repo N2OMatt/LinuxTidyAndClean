@@ -14,20 +14,19 @@
 ##  Copyright : n2omatt - 2017                                                ##
 ##                                                                            ##
 ##  Description :                                                             ##
-##                                                                            ##
 ##---------------------------------------------------------------------------~##
 
-
-################################################################################
+##----------------------------------------------------------------------------##
 ## Script                                                                     ##
-################################################################################
-#Setup my username and email.
+##----------------------------------------------------------------------------##
+## Setup my username and email.
 git config --global user.email "n2omatt@amazingcow.com"
 git config --global user.name  "n2omatt"
 
-#Set up the credential helper.
+## Set up the credential helper.
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=86400' ## 24 hours
+
 ## Other stuff...
 git config --global core.autocrlf input
 git config --global core.fileMode false
