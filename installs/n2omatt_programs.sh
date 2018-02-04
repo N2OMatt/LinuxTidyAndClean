@@ -40,6 +40,8 @@ install_program()
     [ -e "install.sh" ] && sudo ./install.sh
     [ -e "install.py" ] && sudo ./install.py
     [ -e "Makefile"   ] && sudo make install;
+
+    cd - > /dev/null
 }
 
 
