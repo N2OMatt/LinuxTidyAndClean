@@ -22,9 +22,10 @@
 ## Vars                                                                       ##
 ################################################################################
 N2OMATT_DIR="$HOME/Documents/Projects/N2OMatt";
-PROGRAMS="bash-status-line \
-          dots             \
-          sublimetext3_config";
+PROGRAMS="bash-status-line    \
+          dots                \
+          dots_utils          \
+          n2omatt-vscode-ex"
 
 ################################################################################
 ## Script                                                                     ##
