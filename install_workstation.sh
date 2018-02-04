@@ -41,3 +41,4 @@
 ./configs/clean_home_folder.sh
 ./configs/create_bashprofile.sh
 ./configs/set_git_config.sh
+
