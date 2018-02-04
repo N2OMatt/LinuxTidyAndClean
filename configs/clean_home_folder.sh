@@ -19,16 +19,17 @@
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
-cd $HOME;
-
+##----------------------------------------------------------------------------##
 echo "--> Clean Home Folder...";
 
+##------------------------------------------------------------------------------
 ## Clean useless directories.
-rm -rfv Public
-rm -rfv Templates
+rm -rfv "$HOME/Public";
+rm -rfv "$HOME/Templates";
 
+##------------------------------------------------------------------------------
 ## Create the directory for torrents
-mkdir -pv ./Downloads/_torrent_complete
-mkdir -pv ./Downloads/_torrent_download
+mkdir -pv "$HOME/Downloads/_torrent_complete";
+mkdir -pv "$HOME/Downloads/_torrent_download";
 
 echo "--> Done...";
