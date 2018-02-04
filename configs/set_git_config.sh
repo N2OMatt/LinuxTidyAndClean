@@ -28,3 +28,6 @@ git config --global user.name  "n2omatt"
 #Set up the credential helper.
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600' #1hour
+## Other stuff...
+git config --global core.autocrlf input
+git config --global core.fileMode false
