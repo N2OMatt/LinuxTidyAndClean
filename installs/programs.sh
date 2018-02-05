@@ -68,8 +68,8 @@ if [ -z "$HAS_SIMPLE_OS_NAME" ]; then
     exit 1;
 fi;
 
-OS_TYPE=$(simple-os-name --type);
-OS_DISTRO=$(simple-os-name --distro);
+OS_TYPE=$(/usr/local/bin/simple-os-name --type);
+OS_DISTRO=$(/usr/local/bin/simple-os-name --distro);
 
 ##------------------------------------------------------------------------------
 ## Build the install script path.
