@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 ##~---------------------------------------------------------------------------##
 ##                        ____                       _   _                    ##
 ##                  _ __ |___ \ ___  _ __ ___   __ _| |_| |_                  ##
@@ -20,7 +20,8 @@
 ##------------------------------------------------------------------------------
 ## Vars                                                                       ##
 ##------------------------------------------------------------------------------
-TARGET_DIR="$HOME/Documents/Projects/N2OMatt/DownloadRepos";
+REAL_HOME=$(/usr/local/bin/user-real-home);
+TARGET_DIR="$REAL_HOME/Documents/Projects/N2OMatt/DownloadRepos";
 GITHUB_URL="http://github.com/N2OMatt/DownloadRepos";
 
 
