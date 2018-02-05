@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 ##~---------------------------------------------------------------------------##
 ##                        ____                       _   _                    ##
 ##                  _ __ |___ \ ___  _ __ ___   __ _| |_| |_                  ##
@@ -21,7 +21,8 @@
 ##----------------------------------------------------------------------------##
 ## Vars                                                                       ##
 ##----------------------------------------------------------------------------##
-N2OMATT_DIR="$HOME/Documents/Projects/N2OMatt";
+REAL_HOME=$(/usr/local/bin/user-real-home);
+N2OMATT_DIR="$REAL_HOME/Documents/Projects/N2OMatt";
 PROGRAMS="bash-status-line    \
           dots                \
           dots_utils          \
