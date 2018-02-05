@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 ##~---------------------------------------------------------------------------##
 ##                        ____                       _   _                    ##
 ##                  _ __ |___ \ ___  _ __ ___   __ _| |_| |_                  ##
@@ -21,7 +21,9 @@
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-AMAZINGCOW_DIR="$HOME/Documents/Projects/AmazingCow/AmazingCow-Tools/";
+REAL_HOME=$(/usr/local/bin/user-real-home);
+
+AMAZINGCOW_DIR="$REAL_HOME/Documents/Projects/AmazingCow/AmazingCow-Tools/";
 PROGRAMS="Gosh                   \
           COWTODO                \
           Linux_USBBootCreator   \
@@ -54,6 +56,3 @@ for PROGRAM in $PROGRAMS; do
 done;
 
 echo "Done...";
-
-
-
