@@ -14,36 +14,81 @@
 ##  Copyright : n2omatt - 2017                                                ##
 ##                                                                            ##
 ##  Description :                                                             ##
+##    Installs the packages provided by the Operating System vendor.          ##
+##    This is just a wrapper to easy the usage of the actual install          ##
+##    scripts that are required for each platform that we support.            ##
+##                                                                            ##
+##    Each platform install script should be located on:                      ##
+##       ./packages/os-type/os-distro/install.sh                              ##
+##                                                                            ##
+##    This script requires that the n2omatt's simple-os-name from             ##
+##    dots_utils to be already installed.                                     ##
 ##---------------------------------------------------------------------------~##
 
-################################################################################
+
+##----------------------------------------------------------------------------##
 ## Vars                                                                       ##
-################################################################################
+##----------------------------------------------------------------------------##
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)";
-CURR_OS=$(uname -o | tr "[:upper:]" "[:lower:]" | tr  "/" "_");
+OLD_CWD=$(pwd);
+HAS_SIMPLE_OS_NAME=$(whereis simple-os-name | cut -d":" -f2);
+OS_TYPE="";
+OS_DISTRO="";
+INSTALL_SCRIPT_PATH="";
 
 
-################################################################################
+##----------------------------------------------------------------------------##
+## Functions                                                                  ##
+##----------------------------------------------------------------------------##
+print_info()
+{
+    echo "CWD            : ($(pwd))";
+    echo "OS type        : ($OS_TYPE)";
+    echo "OS distro      : ($OS_DISTRO)";
+    echo "Install script : ($INSTALL_SCRIPT_PATH)";
+}
+
+fatal()
+{
+    echo "[FATAL] $@";
+}
+
+
+##----------------------------------------------------------------------------##
 ## Script                                                                     ##
-################################################################################
-## COWNOTE(n2omatt): This script just works for GNU/Linux since
-##    it'll install a lot of stuff from apt-get.
-##    Actually it only works for Debian based OSes.
-if [ "$CURR_OS" != "gnu_linux" ]; then
-    echo "[$0] OS ($CURR_OS) isn't GNU/Linux - Aborting...";
-    exit 0;
+##----------------------------------------------------------------------------##
+##------------------------------------------------------------------------------
+## Change the CWD to the script dir.
+cd "$SCRIPT_DIR";
+
+##------------------------------------------------------------------------------
+## Get the info about the system.
+if [ -z "$HAS_SIMPLE_OS_NAME" ]; then
+    fatal "simple-os-name isn't installed... - Aborting";
+    exit 1;
 fi;
 
-## The paths are relative to the script directory
-cd $SCRIPT_DIR;
+OS_TYPE=$(simple-os-name --type);
+OS_DISTRO=$(simple-os-name --distro);
 
-./programs_info/pre_run.sh
+##------------------------------------------------------------------------------
+## Build the install script path.
+INSTALL_SCRIPT_PATH="./packages/$OS_TYPE/$OS_DISTRO/install.sh";
 
-./programs_info/main.py --purge=./programs_info/list_programs/purge.txt
-./programs_info/main.py --ppa=./programs_info/list_programs/ppa.txt
-./programs_info/main.py --install=./programs_info/list_programs/install.txt
+if [ ! -f "$INSTALL_SCRIPT_PATH" ]; then
+    fatal "Cannot find the install script... - Aborting";
+    print_info;
+    exit 1;
+fi;
 
-./programs_info/post_run.sh
 
-## Restore the cwd.
-cd -;
+##------------------------------------------------------------------------------
+## Call the installation script.
+print_info;
+$INSTALL_SCRIPT_PATH;
+
+
+##------------------------------------------------------------------------------
+## Go back to where we were at begining...
+cd $OLD_CWD;
+echo "Going back to old CWD: ($(pwd))";
