@@ -17,13 +17,19 @@
 ##                                                                            ##
 ##---------------------------------------------------------------------------~##
 
+
+##----------------------------------------------------------------------------##
+## Vars                                                                       ##
+##----------------------------------------------------------------------------##
+REAL_HOME=$(/usr/local/bin/user-real-home);
+
 ##----------------------------------------------------------------------------##
 ## Script                                                                     ##
 ##----------------------------------------------------------------------------##
 echo "--> Creating bash_profile...";
 
-echo "if [ -e ~/.bashrc ]; then " >  "$HOME/.bash_profile";
-echo "   source ~/.bashrc"        >> "$HOME/.bash_profile";
-echo "fi"                         >> "$HOME/.bash_profile";
+echo "if [ -e ~/.bashrc ]; then " >  "$REAL_HOME/.bash_profile";
+echo "   source ~/.bashrc"        >> "$REAL_HOME/.bash_profile";
+echo "fi"                         >> "$REAL_HOME/.bash_profile";
 
 echo "--> Done...";

@@ -17,18 +17,24 @@
 ##---------------------------------------------------------------------------~##
 
 ##----------------------------------------------------------------------------##
+## Vars                                                                       ##
+##----------------------------------------------------------------------------##
+REAL_HOME=$(/usr/local/bin/user-real-home);
+
+
+##----------------------------------------------------------------------------##
 ## Script                                                                     ##
 ##----------------------------------------------------------------------------##
 echo "--> Clean Home Folder...";
 
 ##------------------------------------------------------------------------------
 ## Clean useless directories.
-rm -rfv "$HOME/Public";
-rm -rfv "$HOME/Templates";
+rm -rfv "$REAL_HOME/Public";
+rm -rfv "$REAL_HOME/Templates";
 
 ##------------------------------------------------------------------------------
 ## Create the directory for torrents
-mkdir -pv "$HOME/Downloads/_torrent_complete";
-mkdir -pv "$HOME/Downloads/_torrent_download";
+mkdir -pv "$REAL_HOME/Downloads/_torrent_complete";
+mkdir -pv "$REAL_HOME/Downloads/_torrent_download";
 
 echo "--> Done...";
