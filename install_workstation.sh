@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 ##~---------------------------------------------------------------------------##
 ##                        ____                       _   _                    ##
 ##                  _ __ |___ \ ___  _ __ ___   __ _| |_| |_                  ##
@@ -41,3 +41,4 @@
 ./configs/clean_home_folder.sh
 ./configs/create_bashprofile.sh
 ./configs/set_git_config.sh
+
