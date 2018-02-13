@@ -19,14 +19,16 @@
 ##----------------------------------------------------------------------------##
 ## Script                                                                     ##
 ##----------------------------------------------------------------------------##
+AS_N2OMATT="sudo -u n2omatt";
+
 ## Setup my username and email.
-git config --global user.email "n2omatt@amazingcow.com"
-git config --global user.name  "n2omatt"
+$AS_N2OMATT git config --global user.email "n2omatt@amazingcow.com"
+$AS_N2OMATT git config --global user.name  "n2omatt"
 
 ## Set up the credential helper.
-git config --global credential.helper cache
-git config --global credential.helper 'cache --timeout=86400' ## 24 hours
+$AS_N2OMATT git config --global credential.helper cache
+$AS_N2OMATT git config --global credential.helper 'cache --timeout=86400' ## 24 hours
 
 ## Other stuff...
-git config --global core.autocrlf input
-git config --global core.fileMode false
+$AS_N2OMATT git config --global core.autocrlf input
+$AS_N2OMATT git config --global core.fileMode false
