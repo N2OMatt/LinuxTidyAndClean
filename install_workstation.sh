@@ -55,7 +55,7 @@
 ##   with sudo, and if this script was called with sude all files will belong
 ##   to it.
 if [ $UID == 0 ]; then
-    REAL_HOME=$(user-real-home);
+    REAL_HOME=$(/usr/local/bin/user-real-home);
     USER=$(id -nu n2omatt);
     GROUP=$(id -ng n2omatt);
 
