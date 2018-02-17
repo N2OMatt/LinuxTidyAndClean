@@ -43,6 +43,9 @@ PIPS="beautifulsoup4                           \
       selenium                                 \
       statistics                               \
       wget                                     \
+      cx_Freeze                                \
+      pygame                                   \
+      numpy                                    \
       youtube-dl";
 
 
