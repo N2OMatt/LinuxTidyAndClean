@@ -6,6 +6,7 @@
 ##------------------------------------------------------------------------------
 ## Dummy clone... - We don't care to maintain it...
 cd /var/tmp;
+rm -rf dots_utils;
 git clone http://github.com/n2omatt/dots_utils
 
 ##------------------------------------------------------------------------------
