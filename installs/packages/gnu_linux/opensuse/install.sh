@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 
 ##----------------------------------------------------------------------------##
+## Imports                                                                    ##
+##----------------------------------------------------------------------------##
+source /usr/local/src/acow_shellscript_utils.sh
+
+
+##----------------------------------------------------------------------------##
 ## Helper Functions                                                           ##
 ##----------------------------------------------------------------------------##
 function pause()
@@ -48,7 +54,7 @@ done < "$INPUT_FILE"
 ## Install.
 for PACKAGE in $PACKAGES_TO_INSTALL; do
     echo "Installing package: ($PACKAGE)";
-    sudo zypper install -y "$PACKAGE";
+    as_super_user zypper install -y "$PACKAGE";
 
     test "$INTERACTIVE" == "true" && pause "Waiting...";
 done;

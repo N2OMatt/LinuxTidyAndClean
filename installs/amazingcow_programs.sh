@@ -18,10 +18,16 @@
 ##    To add /remove a tool just edit the PROGRAMS var.                       ##
 ##---------------------------------------------------------------------------~##
 
+##----------------------------------------------------------------------------##
+## Imports                                                                    ##
+##----------------------------------------------------------------------------##
+source /usr/local/src/acow_shellscript_utils.sh
+
+
 ################################################################################
 ## Vars                                                                       ##
 ################################################################################
-REAL_HOME=$(/usr/local/bin/user-real-home);
+REAL_HOME=$(find_real_user_home);
 
 AMAZINGCOW_DIR="$REAL_HOME/Documents/Projects/AmazingCow/AmazingCow-Tools/";
 PROGRAMS="Gosh                   \
@@ -43,9 +49,9 @@ install_program()
 
     ## Check which install method we have
     ## in the repo and use it ;D
-    [ -e "install.sh" ] && sudo ./install.sh
-    [ -e "install.py" ] && sudo ./install.py
-    [ -e "Makefile"   ] && sudo make install;
+    [ -e "install.sh" ] && as_super_user ./install.sh
+    [ -e "install.py" ] && as_super_user ./install.py
+    [ -e "Makefile"   ] && as_super_user make install;
 }
 
 

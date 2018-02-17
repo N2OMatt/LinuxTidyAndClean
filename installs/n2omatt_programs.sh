@@ -19,9 +19,15 @@
 ##---------------------------------------------------------------------------~##
 
 ##----------------------------------------------------------------------------##
+## Imports                                                                    ##
+##----------------------------------------------------------------------------##
+source /usr/local/src/acow_shellscript_utils.sh
+
+
+##----------------------------------------------------------------------------##
 ## Vars                                                                       ##
 ##----------------------------------------------------------------------------##
-REAL_HOME=$(/usr/local/bin/user-real-home);
+REAL_HOME=$(find_real_user_home);
 N2OMATT_DIR="$REAL_HOME/Documents/Projects/N2OMatt";
 PROGRAMS="bash-status-line    \
           dots                \
@@ -34,14 +40,13 @@ PROGRAMS="bash-status-line    \
 ##----------------------------------------------------------------------------##
 install_program()
 {
-    echo "----> Installing $1...";
     cd "$N2OMATT_DIR/$1"
 
     ## Check which install method we have
     ## in the repo and use it ;D
-    [ -e "install.sh" ] && sudo ./install.sh
-    [ -e "install.py" ] && sudo ./install.py
-    [ -e "Makefile"   ] && sudo make install;
+    [ -e "install.sh" ] && as_super_user ./install.sh
+    [ -e "install.py" ] && as_super_user ./install.py
+    [ -e "Makefile"   ] && as_super_user make install;
 
     cd - > /dev/null
 }

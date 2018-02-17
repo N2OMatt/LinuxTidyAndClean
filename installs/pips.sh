@@ -18,6 +18,12 @@
 ##---------------------------------------------------------------------------~##
 
 ##----------------------------------------------------------------------------##
+## Imports                                                                    ##
+##----------------------------------------------------------------------------##
+source /usr/local/src/acow_shellscript_utils.sh
+
+
+##----------------------------------------------------------------------------##
 ## Vars                                                                       ##
 ##----------------------------------------------------------------------------##
 PIPS="beautifulsoup4                           \
@@ -44,11 +50,12 @@ PIPS="beautifulsoup4                           \
 ## Script                                                                     ##
 ##----------------------------------------------------------------------------##
 ## Install the pips.
-sudo python  -m ensurepip;
-sudo python3 -m ensurepip;
+as_super_user python  -m ensurepip --upgrade;
+as_super_user python3 -m ensurepip --upgrade;
+
 
 ## Install each module.
 for PIP in $PIPS; do
-    sudo -H pip  install "$PIP";
-    sudo -H pip3 install "$PIP";
+    as_super_user pip  install "$PIP";
+    as_super_user pip3 install "$PIP";
 done
