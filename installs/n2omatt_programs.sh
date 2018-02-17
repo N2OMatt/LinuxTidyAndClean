@@ -29,9 +29,8 @@ source /usr/local/src/acow_shellscript_utils.sh
 ##----------------------------------------------------------------------------##
 REAL_HOME=$(find_real_user_home);
 N2OMATT_DIR="$REAL_HOME/Documents/Projects/N2OMatt";
-PROGRAMS="bash-status-line    \
-          dots                \
-          dots_utils          \
+PROGRAMS="dots                \
+          bash-status-line    \
           n2omatt-vscode-ex"
 
 
