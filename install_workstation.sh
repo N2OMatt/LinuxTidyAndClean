@@ -17,48 +17,55 @@
 ##    Install stuff that is need for a workstation.                           ##
 ##---------------------------------------------------------------------------~##
 
+
+fix_perms()
+{
+    ##-------------------------------------------------------------------=------
+    ## Correct the ownership.
+    ##   This is needed because some systems doesn't preserve the user stuff
+    ##   with sudo, and if this script was called with sude all files will belong
+    ##   to it.
+    if [ $UID == 0 ]; then
+        REAL_HOME=$(/usr/local/bin/user-real-home);
+        USER=$(id -nu n2omatt);
+        GROUP=$(id -ng n2omatt);
+
+        echo "--> Fixing the owernership to ($USER.$GROUP)";
+        sudo chown -R $USER.$GROUP "$REAL_HOME";
+    fi;
+}
+
 ##----------------------------------------------------------------------------##
 ## Scripts                                                                    ##
 ##----------------------------------------------------------------------------##
 ##------------------------------------------------------------------------------
 ## This is the first thing that we need to do since a lot of our scripts
 ## depends on its features to work correctly...
-./download_dots_utils.sh
+./download_acow_shellscript_utils.sh;
+./download_dots_utils.sh;
 
 ##------------------------------------------------------------------------------
 ## We need download the repos...
-./download_all_repos.sh
+./download_all_repos.sh;
+fix_perms;
 
 ##------------------------------------------------------------------------------
 ## Install the OS packages.
-./installs/programs.sh
+./installs/programs.sh;
 
 ##------------------------------------------------------------------------------
 ## Install the python pips.
-./installs/pips.sh
+./installs/pips.sh;
 
 ##------------------------------------------------------------------------------
 ## Amazing Cow and N2OMatt Programs.
-./installs/amazingcow_programs.sh
-./installs/n2omatt_programs.sh
+./installs/amazingcow_programs.sh;
+./installs/n2omatt_programs.sh;
 
 ##------------------------------------------------------------------------------
 ## Configurations that doesn't depends on the system.
-./configs/clean_home_folder.sh
-./configs/create_bashprofile.sh
-./configs/set_git_config.sh
+./configs/clean_home_folder.sh;
+./configs/create_bashprofile.sh;
+./configs/set_git_config.sh;
 
-
-##------------------------------------------------------------------------------
-## Correct the ownership.
-##   This is needed because some systems doesn't preserve the user stuff
-##   with sudo, and if this script was called with sude all files will belong
-##   to it.
-if [ $UID == 0 ]; then
-    REAL_HOME=$(/usr/local/bin/user-real-home);
-    USER=$(id -nu n2omatt);
-    GROUP=$(id -ng n2omatt);
-
-    echo "--> Fixing the owernership to ($USER.$GROUP)";
-    sudo chown -R $USER.$GROUP "$REAL_HOME";
-fi;
+fix_perms;
